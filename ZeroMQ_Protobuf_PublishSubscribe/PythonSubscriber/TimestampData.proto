@@ -1,0 +1,7 @@
+package pysub;
+
+message TimestampData {
+	required int64 Timestamp = 1;
+	required string Key = 2;
+	required double Data = 3;
+}
