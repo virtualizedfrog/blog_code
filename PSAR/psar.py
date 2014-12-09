@@ -87,7 +87,7 @@ if __name__ == "__main__":
     if not os.path.exists(sys.argv[1]):
         sys.exit("Error: can't open file '%s': No such file" % sys.argv[1])
 
-    barsdata = pd.read_csv('table.csv')
+    barsdata = pd.read_csv(sys.argv[1])
     #Reindex the data: ascending dates are expected in the function
     barsdata = barsdata.reindex(index=barsdata.index[::-1])
     #Convert strings to actual timestamps
